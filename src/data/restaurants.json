@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Chick-Fil-A",
+    "type": "take_out",
+    "cuisine": "sandwich",
+    "bgColor": "#E2163D",
+    "fontColor": "#FFFFFF",
+    "logo": "",
+    "location": "50 N Creasy Ln, Lafayette, IN 47905"
+  },
+  {
+    "name": "Happy China",
+    "type": "take_out",
+    "cuisine": "chinese",
+    "bgColor": "#D1C150",
+    "fontColor": "#FEFDE7",
+    "logo": "",
+    "location": "219 E State St, West Lafayette, IN 47906"
+  },
+  {
+    "name": "Wendy's",
+    "type": "take_out",
+    "cuisine": "sandwich",
+    "bgColor": "#FFFFFF",
+    "fontColor": "#D22030",
+    "logo": "",
+    "location": "252 E State St, West Lafayette, IN 47906"
+  },
+  {
+    "name": "Chipotle",
+    "type": "take_out",
+    "cuisine": "mexican",
+    "bgColor": "#A81612",
+    "fontColor": "#FFFFFF",
+    "logo": "",
+    "location": "200 W State St, West Lafayette, IN 47906"
+  },
+  {
+    "name": "Dog n Suds",
+    "type": "take_out",
+    "cuisine": "sandwich",
+    "bgColor": "#F6EB16",
+    "fontColor": "#ED1C24",
+    "logo": "",
+    "location": "401 Sagamore Pkwy W, West Lafayette, IN 47906"
+  },
+  {
+    "name": "Noodles & Company",
+    "type": "take_out",
+    "cuisine": "pasta",
+    "bgColor": "#C42232",
+    "fontColor": "#FCFCFB",
+    "logo": "",
+    "location": "102 N Chauncey Ave, West Lafayette, IN 47906"
+  }
+]
