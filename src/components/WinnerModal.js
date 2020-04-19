@@ -6,10 +6,11 @@ export default function WinnerModal(props) {
     <Modal
       show={props.show}
       size="lg"
+      onHide={props.onHide}
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
-      <Modal.Header closeButton>
+      <Modal.Header closeButton onHide={props.onHide}>
         <Modal.Title id="contained-modal-title-vcenter">
           Modal heading
         </Modal.Title>
