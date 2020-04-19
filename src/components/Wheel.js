@@ -7,27 +7,31 @@ export class Wheel extends Component {
   componentDidMount() {
     const { segments } = this.props;
 
-    if (this.state.wheel == null)
+    if (this.state.wheel == null) {
+      let wheel = new window.Winwheel({
+        canvasId: "wheelCanvas",
+        responsive: true,
+        drawText: true,
+        numSegments: segments.length,
+        segments: segments,
+        animation: {
+          type: "spinToStop",
+          callbackFinished: this.onSpinEnd,
+          callbackAfter: this.drawColourTriangle,
+        },
+        clearTheCanvas: false,
+      });
+
       this.setState(
         {
-          wheel: new window.Winwheel({
-            canvasId: "wheelCanvas",
-            responsive: true,
-            drawText: true,
-            numSegments: segments.length,
-            segments: segments,
-            animation: {
-              type: "spinToStop",
-              callbackFinished: this.onSpinEnd,
-              callbackAfter: this.drawColourTriangle,
-            },
-          }),
+          wheel,
         },
         () => {
           this.state.wheel.draw();
           setTimeout(this.drawColourTriangle, 1);
         }
       );
+    }
   }
 
   componentWillUnmount() {
@@ -62,7 +66,10 @@ export class Wheel extends Component {
 
   drawColourTriangle = () => {
     // Get context used by the wheel.
-    let ctx = this.state.wheel.ctx;
+    // let ctx = this.state.wheel.ctx;
+    let ctx = this.state.wheel.canvas.getContext("2d");
+    let scaleFactor = this.state.wheel.scaleFactor;
+    console.log(this.state.wheel.scaleFactor);
 
     ctx.strokeStyle = "navy"; // Set line colour.
     ctx.fillStyle = "aqua"; // Set fill colour.
@@ -70,20 +77,26 @@ export class Wheel extends Component {
     let width = ctx.canvas.width / 2;
     let height = ctx.canvas.height * 0.05;
     ctx.beginPath(); // Begin path.
-    ctx.moveTo(width - height, 1); // Move to initial position.
-    ctx.lineTo(width + height, 1); // Draw lines to make the shape.
-    ctx.lineTo(width, height);
-    ctx.lineTo(width - height, 1);
+    ctx.moveTo(width - height * scaleFactor, 1); // Move to initial position.
+    ctx.lineTo(width + height * scaleFactor, 1); // Draw lines to make the shape.
+    ctx.lineTo(width, height * scaleFactor);
+    ctx.lineTo(width - height * scaleFactor, 1);
     ctx.stroke(); // Complete the path by stroking (draw lines).
     ctx.fill(); // Then fill.
   };
 
   render() {
+    if (this.state.wheel) this.drawColourTriangle();
     return (
       <Container>
         <Col>
           <div className="d-flex p-4 justify-content-center">
-            <canvas id="wheelCanvas" width={500} height={500} />
+            <canvas
+              id="wheelCanvas"
+              width={500}
+              height={500}
+              data-responsivescaleheight="true"
+            />
           </div>
 
           <Row className="justify-content-around">
