@@ -31,9 +31,7 @@ export class Wheel extends Component {
   }
 
   componentWillUnmount() {
-    console.log("Unmount");
-    this.state.wheel.draw();
-    this.setState({ wheel: null });
+    this.state.wheel.stopAnimation(false);
   }
 
   onSpinEnd = (selectedSegment) => {
