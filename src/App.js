@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import Navbar from "./Navbar";
+import Navbar from "./components/Navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Wheel } from "./components/Wheel";
 import WinnerModal from "./components/WinnerModal";
