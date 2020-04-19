@@ -5,39 +5,22 @@ export class Wheel extends Component {
   state = { wheel: null, spinning: false, width: 500, height: 500 };
 
   componentDidMount() {
+    const { segments } = this.props;
+
     this.updateWindowDimensions();
     window.addEventListener("resize", this.updateWindowDimensions);
     if (this.state.wheel == null)
       this.setState(
         {
           wheel: new window.Winwheel({
-            canvasId: "myCanvas",
-            numSegments: 4,
-            responsive: true, // This wheel is responsive!
-            segments: [
-              {
-                fillStyle: "#eae56f",
-                text: "One",
-              },
-              {
-                fillStyle: "#89f26e",
-                text: "Two",
-              },
-              {
-                fillStyle: "#7de6ef",
-                text: "Three",
-              },
-              {
-                fillStyle: "#e7706f",
-                text: "Four",
-              },
-            ],
+            canvasId: "wheelCanvas",
+            responsive: true,
             drawText: true,
+            numSegments: segments.length,
+            segments: segments,
             animation: {
               type: "spinToStop",
-              duration: 4,
-              spins: 1.5,
-              callbackFinished: this.alertWheel,
+              callbackFinished: this.onSpinEnd,
               callbackAfter: this.drawColourTriangle,
             },
           }),
@@ -47,15 +30,14 @@ export class Wheel extends Component {
           setTimeout(this.drawColourTriangle, 1);
         }
       );
-    window.addEventListener("resize", this.updateWindowDimensions);
   }
 
   componentWillUnmount() {
     window.removeEventListener("resize", this.updateWindowDimensions);
   }
 
-  alertWheel = (test) => {
-    alert("You have selected " + test.text);
+  onSpinEnd = (selectedSegment) => {
+    if (this.props.onSpinEnd) this.props.onSpinEnd(selectedSegment);
     this.resetWheel();
     this.drawColourTriangle();
   };
@@ -89,7 +71,6 @@ export class Wheel extends Component {
     let width = ctx.canvas.width / 2;
     let height = ctx.canvas.height * 0.05;
     ctx.beginPath(); // Begin path.
-    console.log(ctx.canvas.width);
     ctx.moveTo(width - height, 1); // Move to initial position.
     ctx.lineTo(width + height, 1); // Draw lines to make the shape.
     ctx.lineTo(width, height);
@@ -106,7 +87,6 @@ export class Wheel extends Component {
           this.state.wheel.draw();
           this.drawColourTriangle();
         }, 1);
-
       }
     });
   };
@@ -117,7 +97,7 @@ export class Wheel extends Component {
         <Col>
           <div className="d-flex p-4 justify-content-center">
             <canvas
-              id="myCanvas"
+              id="wheelCanvas"
               width={this.state.width}
               height={this.state.height}
             />
@@ -125,15 +105,11 @@ export class Wheel extends Component {
 
           <Row className="justify-content-around">
             <Button disabled={this.state.spinning} onClick={this.spinWheel}>
-              {!this.state.spinning ? "Spin Me" : "Stop"}
-            </Button>
-            <Button disabled={!this.state.spinning} onClick={this.resetWheel}>
-              Reset
+              Spin Me
             </Button>
           </Row>
         </Col>
       </Container>
     );
   }
-
 }
