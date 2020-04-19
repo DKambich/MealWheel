@@ -2,13 +2,11 @@ import React, { Component } from "react";
 import { Container, Col, Row, Button } from "react-bootstrap";
 
 export class Wheel extends Component {
-  state = { wheel: null, spinning: false, width: 500, height: 500 };
+  state = { wheel: null, spinning: false };
 
   componentDidMount() {
     const { segments } = this.props;
 
-    this.updateWindowDimensions();
-    window.addEventListener("resize", this.updateWindowDimensions);
     if (this.state.wheel == null)
       this.setState(
         {
@@ -33,12 +31,15 @@ export class Wheel extends Component {
   }
 
   componentWillUnmount() {
-    window.removeEventListener("resize", this.updateWindowDimensions);
+    console.log("Unmount");
+    this.state.wheel.draw();
+    this.setState({ wheel: null });
   }
 
   onSpinEnd = (selectedSegment) => {
     if (this.props.onSpinEnd) this.props.onSpinEnd(selectedSegment);
     this.resetWheel();
+    this.state.wheel.draw();
     this.drawColourTriangle();
   };
 
@@ -79,28 +80,12 @@ export class Wheel extends Component {
     ctx.fill(); // Then fill.
   };
 
-  updateWindowDimensions = () => {
-    let dimen = Math.min(window.innerWidth, window.innerHeight, 500);
-    this.setState({ width: dimen, height: dimen }, () => {
-      if (this.state.wheel) {
-        setTimeout(() => {
-          this.state.wheel.draw();
-          this.drawColourTriangle();
-        }, 1);
-      }
-    });
-  };
-
   render() {
     return (
       <Container>
         <Col>
           <div className="d-flex p-4 justify-content-center">
-            <canvas
-              id="wheelCanvas"
-              width={this.state.width}
-              height={this.state.height}
-            />
+            <canvas id="wheelCanvas" width={500} height={500} />
           </div>
 
           <Row className="justify-content-around">
