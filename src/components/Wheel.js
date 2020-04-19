@@ -69,7 +69,6 @@ export class Wheel extends Component {
     // let ctx = this.state.wheel.ctx;
     let ctx = this.state.wheel.canvas.getContext("2d");
     let scaleFactor = this.state.wheel.scaleFactor;
-    console.log(this.state.wheel.scaleFactor);
 
     ctx.strokeStyle = "navy"; // Set line colour.
     ctx.fillStyle = "aqua"; // Set fill colour.
