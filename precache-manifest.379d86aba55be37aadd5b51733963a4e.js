@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e53028826bebb40d0ad7b6193f159c67",
+    "revision": "351dc8b5cad55565858ca004e744b7c6",
     "url": "/MealWheel/index.html"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/MealWheel/static/js/2.8cef2cf7.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6700b5f984ef52e90bf2",
-    "url": "/MealWheel/static/js/main.95d334c3.chunk.js"
+    "revision": "0fba27175a73f34a5b69",
+    "url": "/MealWheel/static/js/main.f360fa03.chunk.js"
   },
   {
     "revision": "0f20fc2ed4f0e4c053c5",
