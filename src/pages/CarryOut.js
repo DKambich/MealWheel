@@ -5,6 +5,13 @@ import { Wheel } from "../components/Wheel";
 import WinnerModal from "../components/WinnerModal";
 import restaurants from "../data/restaurants.json";
 
+function getFontSize(text) {
+  if(text.length < 10) return 22;
+  if(text.length < 15) return 20;
+  if(text.length < 20) return 18;
+  return 16;
+}
+
 function getWheelData() {
   return restaurants
     .filter((entry) => entry.type === "take_out")
@@ -12,7 +19,10 @@ function getWheelData() {
       fillStyle: restaurant.bgColor,
       text: restaurant.name,
       textFillStyle: restaurant.fontColor,
+      textFontSize: getFontSize(restaurant.name),
+      lineWidth: 3,
       textOrientation: "horizontal",
+      data: restaurant,
     }));
 }
 
@@ -28,8 +38,9 @@ export default function CarryOut() {
             <Wheel
               segments={getWheelData()}
               onSpinEnd={(segment) => {
+                setWinner(segment.data);
+
                 setModalShow(true);
-                setWinner(segment);
               }}
             />
           </Col>

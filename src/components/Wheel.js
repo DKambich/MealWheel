@@ -6,7 +6,6 @@ export class Wheel extends Component {
 
   componentDidMount() {
     const { segments } = this.props;
-
     if (this.state.wheel == null) {
       let wheel = new window.Winwheel({
         canvasId: "wheelCanvas",
@@ -14,6 +13,7 @@ export class Wheel extends Component {
         drawText: true,
         numSegments: segments.length,
         segments: segments,
+        pins: true,
         animation: {
           type: "spinToStop",
           callbackFinished: this.onSpinEnd,
@@ -70,31 +70,32 @@ export class Wheel extends Component {
     let ctx = this.state.wheel.canvas.getContext("2d");
     let scaleFactor = this.state.wheel.scaleFactor;
 
-    ctx.strokeStyle = "navy"; // Set line colour.
-    ctx.fillStyle = "aqua"; // Set fill colour.
-    ctx.lineWidth = 2;
+    ctx.strokeStyle = "black"; // Set line colour.
+    ctx.fillStyle = "red"; // Set fill colour.
+    ctx.lineWidth = 3;
     let width = ctx.canvas.width / 2;
-    let height = ctx.canvas.height * 0.05;
+    let height = (ctx.canvas.height * 0.05) / 2;
     ctx.beginPath(); // Begin path.
-    ctx.moveTo(width - height * scaleFactor, 1); // Move to initial position.
-    ctx.lineTo(width + height * scaleFactor, 1); // Draw lines to make the shape.
+    ctx.moveTo(width - height * scaleFactor * 0.25, 1); // Move to initial position.
+    ctx.lineTo(width + height * scaleFactor * 0.25, 1); // Draw lines to make the shape.
     ctx.lineTo(width, height * scaleFactor);
-    ctx.lineTo(width - height * scaleFactor, 1);
+    ctx.lineTo(width - height * scaleFactor * 0.25, 1);
     ctx.stroke(); // Complete the path by stroking (draw lines).
     ctx.fill(); // Then fill.
   };
 
   render() {
     if (this.state.wheel) this.drawColourTriangle();
+    let size = Math.min(window.innerWidth * 0.95, window.innerHeight, 500);
     return (
       <Container>
         <Col>
-          <div className="d-flex p-4 justify-content-center">
+          <div className="d-flex py-4 justify-content-center">
             <canvas
               id="wheelCanvas"
-              width={500}
-              height={500}
-              data-responsivescaleheight="true"
+              data-responsiveScaleHeight="true" /* Optional Parameters */
+              width={size}
+              height={size}
             />
           </div>
 

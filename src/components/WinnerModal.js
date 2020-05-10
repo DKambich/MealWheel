@@ -1,24 +1,49 @@
 import React from "react";
-import { Modal, Button } from "react-bootstrap";
+import {
+  Modal,
+  Button,
+  ModalTitle,
+  ModalBody,
+  ModalFooter,
+  Col,
+  Container,
+  Image,
+} from "react-bootstrap";
+import ModalHeader from "react-bootstrap/ModalHeader";
 
-export default function WinnerModal(props) {
+export default function WinnerModal({ onHide, show, winner }) {
+  if (!winner) return null;
+  let link = "https://www.google.com/maps/dir/?api=1&";
+  let query =
+    "travelmode=driving&destination=" +
+    winner.location.replace(" ", "+").replace(",", "%2C");
   return (
     <Modal
-      show={props.show}
+      show={show}
       size="lg"
-      onHide={props.onHide}
+      onHide={onHide}
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
-      <Modal.Header closeButton onHide={props.onHide}>
-        <Modal.Title id="contained-modal-title-vcenter">
-          Modal heading
-        </Modal.Title>
-      </Modal.Header>
-      <Modal.Body>{props.winner ? props.winner.toString() : ""}</Modal.Body>
-      <Modal.Footer>
-        <Button onClick={props.onHide}>Close</Button>
-      </Modal.Footer>
+      <ModalHeader closeButton onHide={onHide}>
+        <ModalTitle id="contained-modal-title-vcenter">
+          {winner.name} was Picked!
+        </ModalTitle>
+      </ModalHeader>
+      <ModalBody>
+        <Container>
+          <Col className="justify-content-end text-center">
+            <Image src="https://via.placeholder.com/350" rounded className="img-fluid" />
+            <h1>{winner.name}</h1>
+            <a target="_blank" rel="noopener noreferrer" href={link + query}>
+              <Button>Get Directions</Button>
+            </a>
+          </Col>
+        </Container>
+      </ModalBody>
+      <ModalFooter>
+        <Button onClick={onHide}>Close</Button>
+      </ModalFooter>
     </Modal>
   );
 }
