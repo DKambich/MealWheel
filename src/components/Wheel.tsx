@@ -1,47 +1,55 @@
 import React, { Component } from "react";
 import { Col, Row, Button } from "react-bootstrap";
+import { FixMeLater } from "../constants";
 
-export class Wheel extends Component {
-  state = { wheel: null, spinning: false };
+type WheelProps = {
+  onSpinEnd: (segment: FixMeLater) => void;
+  segments: FixMeLater;
+};
+
+type WheelState = {
+  wheel: FixMeLater;
+  spinning: boolean;
+};
+export class Wheel extends Component<WheelProps, WheelState> {
+  state = {
+    spinning: false,
+    wheel: new window.Winwheel({
+      canvasId: "dummyCanvas",
+      numSegments: 0,
+    }),
+  };
 
   componentDidMount() {
-    const { segments } = this.props;
-    if (this.state.wheel == null) {
-      let wheel = new window.Winwheel({
-        canvasId: "wheelCanvas",
-        responsive: true,
-        drawText: true,
-        numSegments: segments.length,
-        segments: segments,
-        pins: true,
-        animation: {
-          type: "spinToStop",
-          callbackFinished: this.onSpinEnd,
-          callbackAfter: this.drawColourTriangle,
-        },
-        clearTheCanvas: false,
-      });
+    const wheel = new window.Winwheel({
+      canvasId: "wheelCanvas",
+      responsive: true,
+      drawText: true,
+      numSegments: this.props.segments.length,
+      segments: this.props.segments,
+      pins: true,
+      animation: {
+        type: "spinToStop",
+        callbackFinished: this.onSpinEnd,
+        callbackAfter: this.drawColourTriangle,
+      },
+      clearTheCanvas: false,
+    });
 
-      this.setState(
-        {
-          wheel,
-        },
-        () => {
-          this.state.wheel.draw();
-          setTimeout(this.drawColourTriangle, 1);
-        }
-      );
-    }
+    this.setState({ wheel }, () => {
+      this.state.wheel.draw();
+      setTimeout(this.drawColourTriangle, 1);
+    });
   }
 
   componentWillUnmount() {
-    this.state.wheel.stopAnimation(false);
+    this.state.wheel!.stopAnimation(false);
   }
 
-  onSpinEnd = (selectedSegment) => {
+  onSpinEnd = (selectedSegment: FixMeLater) => {
     if (this.props.onSpinEnd) this.props.onSpinEnd(selectedSegment);
     this.resetWheel();
-    this.state.wheel.draw();
+    this.state.wheel?.draw();
     this.drawColourTriangle();
   };
 

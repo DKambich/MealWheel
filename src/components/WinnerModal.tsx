@@ -9,8 +9,18 @@ import {
   Image,
 } from "react-bootstrap";
 import ModalHeader from "react-bootstrap/ModalHeader";
+import { FixMeLater } from "../constants";
 
-export default function WinnerModal({ onHide, show, winner }) {
+type WinnerModalProps = {
+  onHide: () => void;
+  show: boolean;
+  winner: FixMeLater;
+};
+export default function WinnerModal({
+  onHide,
+  show,
+  winner,
+}: WinnerModalProps) {
   if (!winner) return null;
   let link = "https://www.google.com/maps/dir/?api=1&";
   let query = `travelmode=driving&destination=${winner.location
