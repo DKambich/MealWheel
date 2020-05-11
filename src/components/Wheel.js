@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Col, Row, Button } from "react-bootstrap";
+import { Col, Row, Button } from "react-bootstrap";
 
 export class Wheel extends Component {
   state = { wheel: null, spinning: false };
@@ -86,26 +86,23 @@ export class Wheel extends Component {
 
   render() {
     if (this.state.wheel) this.drawColourTriangle();
-    let size = Math.min(window.innerWidth * 0.95, window.innerHeight, 500);
+    let size = Math.min(window.innerWidth * 0.98, window.innerHeight, 500);
     return (
-      <Container>
-        <Col>
-          <div className="d-flex py-4 justify-content-center">
-            <canvas
-              id="wheelCanvas"
-              data-responsiveScaleHeight="true" /* Optional Parameters */
-              width={size}
-              height={size}
-            />
-          </div>
-
-          <Row className="justify-content-around">
-            <Button disabled={this.state.spinning} onClick={this.spinWheel}>
-              Spin Me
-            </Button>
-          </Row>
-        </Col>
-      </Container>
+      <Col>
+        <Row className="justify-content-center py-4" noGutters>
+          <canvas
+            id="wheelCanvas"
+            data-responsiveScaleHeight="true" /* Optional Parameters */
+            width={size}
+            height={size}
+          />
+        </Row>
+        <Row className="justify-content-around">
+          <Button disabled={this.state.spinning} onClick={this.spinWheel}>
+            Spin Me
+          </Button>
+        </Row>
+      </Col>
     );
   }
 }

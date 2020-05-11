@@ -8,7 +8,16 @@ export default function Navbar() {
   return (
     <BSNavbar bg="primary" variant="dark" expand="lg">
       <LinkContainer to="home">
-        <NavbarBrand>MealWheel</NavbarBrand>
+        <NavbarBrand>
+          <img
+            src="./MealWheelLogo.png"
+            width="30"
+            height="30"
+            className="d-inline-block align-top mr-2"
+            alt="React Bootstrap logo"
+          />
+          MealWheel
+        </NavbarBrand>
       </LinkContainer>
       <NavbarToggle aria-controls="basic-navbar-nav" />
       <NavbarCollapse id="basic-navbar-nav">
