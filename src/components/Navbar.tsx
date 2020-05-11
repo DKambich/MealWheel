@@ -11,8 +11,8 @@ export default function Navbar() {
         <NavbarBrand>
           <img
             src="./MealWheelLogo.png"
-            width="30"
-            height="30"
+            width={32}
+            height={32}
             className="d-inline-block align-top mr-2"
             alt="React Bootstrap logo"
           />

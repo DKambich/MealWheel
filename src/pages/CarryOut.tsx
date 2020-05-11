@@ -3,8 +3,9 @@ import Navbar from "../components/Navbar";
 import { Wheel } from "../components/Wheel";
 import WinnerModal from "../components/WinnerModal";
 import restaurants from "../data/restaurants.json";
+import { FixMeLater } from "../constants";
 
-function getFontSize(text) {
+function getFontSize(text: string) {
   if (text.length < 10) return 22;
   if (text.length < 15) return 20;
   if (text.length < 20) return 18;
@@ -33,7 +34,7 @@ export default function CarryOut() {
       <Navbar />
       <Wheel
         segments={getWheelData()}
-        onSpinEnd={(segment) => {
+        onSpinEnd={(segment: FixMeLater) => {
           setWinner(segment.data);
           setModalShow(true);
         }}
