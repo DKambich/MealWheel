@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar as BSNavbar, Nav, NavbarBrand } from "react-bootstrap";
+import { Navbar as BSNavbar, Nav, NavbarBrand, Image } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import NavbarToggle from "react-bootstrap/NavbarToggle";
 import NavbarCollapse from "react-bootstrap/NavbarCollapse";
@@ -9,8 +9,8 @@ export default function Navbar() {
     <BSNavbar bg="primary" variant="dark" expand="lg">
       <LinkContainer to="home">
         <NavbarBrand>
-          <img
-            src="./MealWheelLogo.png"
+          <Image
+            src="./logo.png"
             width={32}
             height={32}
             className="d-inline-block align-top mr-2"
