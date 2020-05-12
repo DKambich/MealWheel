@@ -80,6 +80,6 @@ export const DEFAULT_RESTAURANT: Restaurant = {
   cuisine: "",
   bgColor: "",
   fontColor: "",
-  logo: "",
+  logo: "placeholder.png",
   location: "",
 };

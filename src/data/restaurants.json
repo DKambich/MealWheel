@@ -5,7 +5,7 @@
     "cuisine": "sandwich",
     "bgColor": "#E2163D",
     "fontColor": "#FFFFFF",
-    "logo": "./logos/chick_fil_a_512.png",
+    "logo": "chick_fil_a_512.png",
     "location": "50 N Creasy Ln, Lafayette, IN 47905"
   },
   {
@@ -14,7 +14,7 @@
     "cuisine": "chinese",
     "bgColor": "#D1C150",
     "fontColor": "#FEFDE7",
-    "logo": "./logos/happy_china_512.png",
+    "logo": "happy_china_512.png",
     "location": "219 E State St, West Lafayette, IN 47906"
   },
   {
@@ -23,7 +23,7 @@
     "cuisine": "sandwich",
     "bgColor": "#FFFFFF",
     "fontColor": "#D22030",
-    "logo": "./logos/wendys_512.png",
+    "logo": "wendys_512.png",
     "location": "252 E State St, West Lafayette, IN 47906"
   },
   {
@@ -32,7 +32,7 @@
     "cuisine": "mexican",
     "bgColor": "#A81612",
     "fontColor": "#FFFFFF",
-    "logo": "./logos/chipotle_512.png",
+    "logo": "chipotle_512.png",
     "location": "200 W State St, West Lafayette, IN 47906"
   },
   {
@@ -41,7 +41,7 @@
     "cuisine": "sandwich",
     "bgColor": "#F6EB16",
     "fontColor": "#ED1C24",
-    "logo": "./logos/dogs_n_suds_512.png",
+    "logo": "dogs_n_suds_512.png",
     "location": "401 Sagamore Pkwy W, West Lafayette, IN 47906"
   },
   {
@@ -50,7 +50,7 @@
     "cuisine": "pasta",
     "bgColor": "#C42232",
     "fontColor": "#FCFCFB",
-    "logo": "./logos/noodles_&_company_512.png",
+    "logo": "noodles_&_company_512.png",
     "location": "102 N Chauncey Ave, West Lafayette, IN 47906"
   }
 ]
