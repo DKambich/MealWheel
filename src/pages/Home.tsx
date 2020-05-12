@@ -8,12 +8,12 @@ export function Home() {
       <Navbar />
       <Container>
         <Jumbotron className="my-4">
-          <h1 className="display-4">Welcome to MealWheel!</h1>
+          <h1 className="display-4">Welcome to Meal Wheel!</h1>
           <p className="lead">
             Ever have disagreements about where to eat or just simply can't
-            decide what sounds good? Then MealWheel is the site for you.
-            MealWheel compiles some of West Lafayette's best restaurants.
-            MealWheel also partitions the restaurants by cuisine, allowing for
+            decide what sounds good? Then Meal Wheel is the site for you.
+            Meal Wheel compiles some of West Lafayette's best restaurants.
+            Meal Wheel also partitions the restaurants by cuisine, allowing for
             finer control of options.
           </p>
           <hr className="my-4" />

@@ -14,9 +14,9 @@ export default function Navbar() {
             width={32}
             height={32}
             className="align-top mr-2"
-            alt="MealWheel logo"
+            alt="Meal Wheel logo"
           />
-          MealWheel
+          Meal Wheel
         </NavbarBrand>
       </LinkContainer>
       <NavbarToggle aria-controls="basic-navbar-nav" />
