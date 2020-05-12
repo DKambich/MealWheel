@@ -7,6 +7,7 @@ import {
   getWheelData,
   Restaurant,
   DEFAULT_RESTAURANT,
+  routes,
 } from "../constants";
 import { Container, Jumbotron } from "react-bootstrap";
 
@@ -17,7 +18,7 @@ export default function CarryOut() {
 
   return (
     <>
-      <Navbar />
+      <Navbar activeTab={routes.CARRY_OUT} />
       {segments.length > 0 && (
         <Wheel
           segments={segments}

@@ -2,6 +2,12 @@ import restaurantJSON from "./data/restaurants.json";
 
 export const restaurants: Restaurant[] = restaurantJSON;
 
+export const routes = {
+  HOME: "home",
+  CARRY_OUT: "carryout",
+  DINE_IN: "dinein",
+};
+
 export type FixMeLater = any;
 
 export type Restaurant = {

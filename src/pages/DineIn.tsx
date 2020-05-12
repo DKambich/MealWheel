@@ -7,6 +7,7 @@ import {
   WheelSegment,
   Restaurant,
   DEFAULT_RESTAURANT,
+  routes,
 } from "../constants";
 import { Jumbotron, Container } from "react-bootstrap";
 
@@ -17,7 +18,7 @@ export default function DineIn() {
 
   return (
     <>
-      <Navbar />
+      <Navbar activeTab={routes.DINE_IN} />
       {segments.length > 0 && (
         <Wheel
           segments={segments}
