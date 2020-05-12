@@ -43,7 +43,9 @@ export default function WinnerModal({
         <Container>
           <Col className="justify-content-end text-center">
             <Image
-              src="https://via.placeholder.com/350"
+              src={winner.logo}
+              width={256}
+              height={256}
               rounded
               className="img-fluid img-thumbnail"
             />
