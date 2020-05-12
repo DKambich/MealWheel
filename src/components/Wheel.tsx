@@ -1,23 +1,20 @@
 import React, { Component } from "react";
 import { Col, Row, Button } from "react-bootstrap";
-import { FixMeLater } from "../constants";
+import { DEFAULT_WHEEL, WheelSegment, WinWheel } from "../constants";
 
 type WheelProps = {
-  onSpinEnd: (segment: FixMeLater) => void;
-  segments: FixMeLater;
+  onSpinEnd: (segment: WheelSegment) => void;
+  segments: WheelSegment[];
 };
 
 type WheelState = {
-  wheel: FixMeLater;
+  wheel: WinWheel;
   spinning: boolean;
 };
 export class Wheel extends Component<WheelProps, WheelState> {
   state = {
     spinning: false,
-    wheel: new window.Winwheel({
-      canvasId: "dummyCanvas",
-      numSegments: 0,
-    }),
+    wheel: DEFAULT_WHEEL,
   };
 
   componentDidMount() {
@@ -43,10 +40,10 @@ export class Wheel extends Component<WheelProps, WheelState> {
   }
 
   componentWillUnmount() {
-    this.state.wheel!.stopAnimation(false);
+    this.state.wheel.stopAnimation(false);
   }
 
-  onSpinEnd = (selectedSegment: FixMeLater) => {
+  onSpinEnd = (selectedSegment: WheelSegment) => {
     if (this.props.onSpinEnd) this.props.onSpinEnd(selectedSegment);
     this.resetWheel();
     this.state.wheel?.draw();

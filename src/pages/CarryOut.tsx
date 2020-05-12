@@ -2,13 +2,18 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import { Wheel } from "../components/Wheel";
 import WinnerModal from "../components/WinnerModal";
-import { FixMeLater, getWheelData } from "../constants";
+import {
+  WheelSegment,
+  getWheelData,
+  Restaurant,
+  DEFAULT_RESTAURANT,
+} from "../constants";
 import { Container, Jumbotron } from "react-bootstrap";
 
 export default function CarryOut() {
   const [modalShow, setModalShow] = React.useState(false);
-  const [winner, setWinner] = React.useState(null);
-  const [segments, setSegments] = React.useState(getWheelData("take_out"));
+  const [winner, setWinner] = React.useState<Restaurant>(DEFAULT_RESTAURANT);
+  const segments = getWheelData("take_out");
 
   return (
     <>
@@ -16,7 +21,7 @@ export default function CarryOut() {
       {segments.length > 0 && (
         <Wheel
           segments={segments}
-          onSpinEnd={(segment: FixMeLater) => {
+          onSpinEnd={(segment: WheelSegment) => {
             setWinner(segment.data);
             setModalShow(true);
           }}

@@ -1,6 +1,38 @@
-import restaurants from "./data/restaurants.json";
+import restaurantJSON from "./data/restaurants.json";
+
+export const restaurants: Restaurant[] = restaurantJSON;
 
 export type FixMeLater = any;
+
+export type Restaurant = {
+  name: string;
+  type: string;
+  cuisine: string;
+  bgColor: string;
+  fontColor: string;
+  logo: string;
+  location: string;
+};
+
+export type WheelSegment = {
+  fillStyle: string;
+  text: string;
+  textFillStyle: string;
+  textFontSize: number;
+  lineWidth: number;
+  textOrientation: string;
+  data: Restaurant;
+};
+
+export type WinWheel = {
+  animation: any;
+  canvas: any;
+  rotationAngle: number;
+  scaleFactor: number;
+  draw: (clearTheCanvas?: boolean) => void;
+  startAnimation: () => void;
+  stopAnimation: (canCallback?: boolean) => void;
+};
 
 export function getFontSize(text: string) {
   if (text.length < 10) return 22;
@@ -9,9 +41,9 @@ export function getFontSize(text: string) {
   return 16;
 }
 
-export function getWheelData(restaurantType?: string) {
+export function getWheelData(type?: string): WheelSegment[] {
   return restaurants
-    .filter((entry) => (!restaurantType ? true : entry.type === restaurantType))
+    .filter((entry: Restaurant) => (!type ? true : entry.type === type))
     .map((restaurant) => ({
       fillStyle: restaurant.bgColor,
       text: restaurant.name,
@@ -30,3 +62,18 @@ declare global {
 }
 
 window.Winwheel = window.Winwheel || {};
+
+export const DEFAULT_WHEEL: WinWheel = new window.Winwheel({
+  canvasId: "dummyCanvas",
+  numSegments: 0,
+});
+
+export const DEFAULT_RESTAURANT: Restaurant = {
+  name: "",
+  type: "",
+  cuisine: "",
+  bgColor: "",
+  fontColor: "",
+  logo: "",
+  location: "",
+};

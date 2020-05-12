@@ -9,12 +9,12 @@ import {
   Image,
 } from "react-bootstrap";
 import ModalHeader from "react-bootstrap/ModalHeader";
-import { FixMeLater } from "../constants";
+import { Restaurant } from "../constants";
 
 type WinnerModalProps = {
   onHide: () => void;
   show: boolean;
-  winner: FixMeLater;
+  winner: Restaurant | null;
 };
 export default function WinnerModal({
   onHide,
