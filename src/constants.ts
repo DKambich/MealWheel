@@ -10,6 +10,12 @@ export const routes = {
 
 export type FixMeLater = any;
 
+export type Branding = {
+  bgColor: string;
+  fontColor: string;
+  logo: string;
+};
+
 export type Restaurant = {
   name: string;
   type: string;
