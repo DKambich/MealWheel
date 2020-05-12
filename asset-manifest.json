@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/MealWheel/static/js/main.1330e2d0.chunk.js",
-    "main.js.map": "/MealWheel/static/js/main.1330e2d0.chunk.js.map",
+    "main.js": "/MealWheel/static/js/main.82e86322.chunk.js",
+    "main.js.map": "/MealWheel/static/js/main.82e86322.chunk.js.map",
     "runtime-main.js": "/MealWheel/static/js/runtime-main.5a06f648.js",
     "runtime-main.js.map": "/MealWheel/static/js/runtime-main.5a06f648.js.map",
     "static/css/2.69121389.chunk.css": "/MealWheel/static/css/2.69121389.chunk.css",
-    "static/js/2.a2124d47.chunk.js": "/MealWheel/static/js/2.a2124d47.chunk.js",
-    "static/js/2.a2124d47.chunk.js.map": "/MealWheel/static/js/2.a2124d47.chunk.js.map",
+    "static/js/2.13f3278a.chunk.js": "/MealWheel/static/js/2.13f3278a.chunk.js",
+    "static/js/2.13f3278a.chunk.js.map": "/MealWheel/static/js/2.13f3278a.chunk.js.map",
     "index.html": "/MealWheel/index.html",
-    "precache-manifest.dcb44c639d8a673863a4b3de610ba178.js": "/MealWheel/precache-manifest.dcb44c639d8a673863a4b3de610ba178.js",
+    "precache-manifest.036eb64fc4f11c3cdcb3121b7b635008.js": "/MealWheel/precache-manifest.036eb64fc4f11c3cdcb3121b7b635008.js",
     "service-worker.js": "/MealWheel/service-worker.js",
     "static/css/2.69121389.chunk.css.map": "/MealWheel/static/css/2.69121389.chunk.css.map",
-    "static/js/2.a2124d47.chunk.js.LICENSE.txt": "/MealWheel/static/js/2.a2124d47.chunk.js.LICENSE.txt",
+    "static/js/2.13f3278a.chunk.js.LICENSE.txt": "/MealWheel/static/js/2.13f3278a.chunk.js.LICENSE.txt",
     "static/media/chick_fil_a_512.png": "/MealWheel/static/media/chick_fil_a_512.6fc5840d.png",
     "static/media/chipotle_512.png": "/MealWheel/static/media/chipotle_512.cbf62590.png",
     "static/media/dogs_n_suds_512.png": "/MealWheel/static/media/dogs_n_suds_512.85ce1823.png",
@@ -22,7 +22,7 @@
   "entrypoints": [
     "static/js/runtime-main.5a06f648.js",
     "static/css/2.69121389.chunk.css",
-    "static/js/2.a2124d47.chunk.js",
-    "static/js/main.1330e2d0.chunk.js"
+    "static/js/2.13f3278a.chunk.js",
+    "static/js/main.82e86322.chunk.js"
   ]
 }
