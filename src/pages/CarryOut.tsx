@@ -2,43 +2,37 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import { Wheel } from "../components/Wheel";
 import WinnerModal from "../components/WinnerModal";
-import restaurants from "../data/restaurants.json";
-import { FixMeLater } from "../constants";
-
-function getFontSize(text: string) {
-  if (text.length < 10) return 22;
-  if (text.length < 15) return 20;
-  if (text.length < 20) return 18;
-  return 16;
-}
-
-function getWheelData() {
-  return restaurants
-    .filter((entry) => entry.type === "take_out")
-    .map((restaurant) => ({
-      fillStyle: restaurant.bgColor,
-      text: restaurant.name,
-      textFillStyle: restaurant.fontColor,
-      textFontSize: getFontSize(restaurant.name),
-      lineWidth: 2,
-      textOrientation: "horizontal",
-      data: restaurant,
-    }));
-}
+import { FixMeLater, getWheelData } from "../constants";
+import { Container, Jumbotron } from "react-bootstrap";
 
 export default function CarryOut() {
   const [modalShow, setModalShow] = React.useState(false);
   const [winner, setWinner] = React.useState(null);
+  const [segments, setSegments] = React.useState(getWheelData("take_out"));
+
   return (
     <>
       <Navbar />
-      <Wheel
-        segments={getWheelData()}
-        onSpinEnd={(segment: FixMeLater) => {
-          setWinner(segment.data);
-          setModalShow(true);
-        }}
-      />
+      {segments.length > 0 && (
+        <Wheel
+          segments={segments}
+          onSpinEnd={(segment: FixMeLater) => {
+            setWinner(segment.data);
+            setModalShow(true);
+          }}
+        />
+      )}
+      {segments.length === 0 && (
+        <Container>
+          <Jumbotron className="my-4">
+            <h1 className="display-4">Oops No Data Available!</h1>
+            <p className="lead">
+              Sorry no data on Carry Out restaurants has been collected yet. Try
+              again later!
+            </p>
+          </Jumbotron>
+        </Container>
+      )}
       <WinnerModal
         show={modalShow}
         onHide={() => setModalShow(false)}
