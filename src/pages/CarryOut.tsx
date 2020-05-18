@@ -20,13 +20,16 @@ export default function CarryOut() {
     <>
       <Navbar activeTab={routes.CARRY_OUT} />
       {segments.length > 0 && (
-        <Wheel
-          segments={segments}
-          onSpinEnd={(segment: WheelSegment) => {
-            setWinner(segment.data);
-            setModalShow(true);
-          }}
-        />
+        <>
+          <h1 className="display-6 text-center">Carry Out Wheel</h1>
+          <Wheel
+            segments={segments}
+            onSpinEnd={(segment: WheelSegment) => {
+              setWinner(segment.data);
+              setModalShow(true);
+            }}
+          />
+        </>
       )}
       {segments.length === 0 && (
         <Container>

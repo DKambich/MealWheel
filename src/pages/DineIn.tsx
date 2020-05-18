@@ -19,14 +19,18 @@ export default function DineIn() {
   return (
     <>
       <Navbar activeTab={routes.DINE_IN} />
+
       {segments.length > 0 && (
-        <Wheel
-          segments={segments}
-          onSpinEnd={(segment: WheelSegment) => {
-            setWinner(segment.data);
-            setModalShow(true);
-          }}
-        />
+        <>
+          <h1 className="display-6 text-center">Dine In Wheel</h1>
+          <Wheel
+            segments={segments}
+            onSpinEnd={(segment: WheelSegment) => {
+              setWinner(segment.data);
+              setModalShow(true);
+            }}
+          />
+        </>
       )}
       {segments.length === 0 && (
         <Container>

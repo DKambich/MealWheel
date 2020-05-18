@@ -20,9 +20,7 @@ export type Restaurant = {
   name: string;
   type: string;
   cuisine: string;
-  bgColor: string;
-  fontColor: string;
-  logo: string;
+  brand: Branding;
   location: string;
 };
 
@@ -57,9 +55,9 @@ export function getWheelData(type?: string): WheelSegment[] {
   return restaurants
     .filter((entry: Restaurant) => (!type ? true : entry.type === type))
     .map((restaurant) => ({
-      fillStyle: restaurant.bgColor,
+      fillStyle: restaurant.brand.bgColor,
       text: restaurant.name,
-      textFillStyle: restaurant.fontColor,
+      textFillStyle: restaurant.brand.fontColor,
       textFontSize: getFontSize(restaurant.name),
       lineWidth: 2,
       textOrientation: "horizontal",
@@ -84,8 +82,6 @@ export const DEFAULT_RESTAURANT: Restaurant = {
   name: "",
   type: "",
   cuisine: "",
-  bgColor: "",
-  fontColor: "",
-  logo: "placeholder.png",
+  brand: { bgColor: "", fontColor: "", logo: "placeholder.png" },
   location: "",
 };

@@ -43,7 +43,7 @@ export default function WinnerModal({
         <Container>
           <Col className="justify-content-end text-center">
             <Image
-              src={require("../data/logos/" + winner.logo)}
+              src={require("../data/logos/" + winner.brand.logo)}
               width={256}
               height={256}
               rounded
