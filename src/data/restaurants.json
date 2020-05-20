@@ -6,7 +6,7 @@
     "brand": {
       "bgColor": "#E2163D",
       "fontColor": "#FFFFFF",
-      "logo": ""
+      "logo": "chick_fil_a_512.png"
     },
     "location": "50 N Creasy Ln, Lafayette, IN 47905"
   },
@@ -17,7 +17,7 @@
     "brand": {
       "bgColor": "#cd1628",
       "fontColor": "#f4db05",
-      "logo": ""
+      "logo": "happy_china_512.png"
     },
     "location": "219 E State St, West Lafayette, IN 47906"
   },
@@ -28,7 +28,7 @@
     "brand": {
       "bgColor": "#FFFFFF",
       "fontColor": "#D22030",
-      "logo": ""
+      "logo": "wendys_512.png"
     },
     "location": "252 E State St, West Lafayette, IN 47906"
   },
@@ -39,7 +39,7 @@
     "brand": {
       "bgColor": "#A81612",
       "fontColor": "#FFFFFF",
-      "logo": ""
+      "logo": "chipotle_512.png"
     },
     "location": "200 W State St, West Lafayette, IN 47906"
   },
@@ -50,7 +50,7 @@
     "brand": {
       "bgColor": "#F6EB16",
       "fontColor": "#ED1C24",
-      "logo": ""
+      "logo": "dog_n_suds_512.png"
     },
     "location": "401 Sagamore Pkwy W, West Lafayette, IN 47906"
   },
@@ -61,7 +61,7 @@
     "brand": {
       "bgColor": "#C42232",
       "fontColor": "#FCFCFB",
-      "logo": ""
+      "logo": "noodles_&_company_512.png"
     },
     "location": "102 N Chauncey Ave, West Lafayette, IN 47906"
   },
@@ -72,7 +72,7 @@
     "brand": {
       "bgColor": "#ba2025",
       "fontColor": "#ffffff",
-      "logo": ""
+      "logo": "mad_mushroom_512.png"
     },
     "location": "320 W State St, West Lafayette, IN 47906"
   },
@@ -83,7 +83,7 @@
     "brand": {
       "bgColor": "#fefefe",
       "fontColor": "#d81a31",
-      "logo": ""
+      "logo": "five_guys_512.png"
     },
     "location": "135 S Chauncey Ave Suite 1-K, West Lafayette, IN 47906"
   },
@@ -94,7 +94,7 @@
     "brand": {
       "bgColor": "#fc1921",
       "fontColor": "#000000",
-      "logo": ""
+      "logo": "panda_express_512.png"
     },
     "location": "138 Northwestern Ave, West Lafayette, IN 47906"
   },
@@ -105,7 +105,7 @@
     "brand": {
       "bgColor": "#07603a",
       "fontColor": "#cd2229",
-      "logo": ""
+      "logo": "fiesta_mexican_grill_512.png"
     },
     "location": "102 N Chauncey Ave, West Lafayette, IN 47906"
   },
@@ -116,7 +116,7 @@
     "brand": {
       "bgColor": "#8b0101",
       "fontColor": "#faf7fc",
-      "logo": ""
+      "logo": "south_street_smokehouse_512.png"
     },
     "location": "3305 South St, Lafayette, IN 47904"
   },
@@ -127,7 +127,7 @@
     "brand": {
       "bgColor": "#ffffff",
       "fontColor": "#f99d1c",
-      "logo": ""
+      "logo": "qdoba_512.png"
     },
     "location": "139 Northwestern Ave, West Lafayette, IN 47906"
   },
@@ -138,7 +138,7 @@
     "brand": {
       "bgColor": "#ffffff",
       "fontColor": "#df9c46",
-      "logo": ""
+      "logo": "christos_512.png"
     },
     "location": "1018 Sagamore Pkwy W, West Lafayette, IN 47906"
   },
@@ -149,7 +149,7 @@
     "brand": {
       "bgColor": "#ffffff",
       "fontColor": "#222021",
-      "logo": ""
+      "logo": "digbys_512.png"
     },
     "location": "133 N 4th St, Lafayette, IN 47901"
   },
@@ -160,7 +160,7 @@
     "brand": {
       "bgColor": "#be3c30",
       "fontColor": "#fefefe",
-      "logo": ""
+      "logo": "sake_sushi_asian_fusion_512.png"
     },
     "location": "731 Main St, Lafayette, IN 47901"
   },
@@ -171,7 +171,7 @@
     "brand": {
       "bgColor": "#fefefe",
       "fontColor": "#acf41e",
-      "logo": ""
+      "logo": "sushi_don_512.png"
     },
     "location": "3338 Main St, Lafayette, IN 47905"
   },
@@ -182,7 +182,7 @@
     "brand": {
       "bgColor": "#febf55",
       "fontColor": "#f20003",
-      "logo": ""
+      "logo": "dos_amigos_512.png"
     },
     "location": "360 Brown St, West Lafayette, IN 47906"
   },
@@ -193,7 +193,7 @@
     "brand": {
       "bgColor": "#fef200",
       "fontColor": "#912822",
-      "logo": ""
+      "logo": "la_hacienda_512.png"
     },
     "location": "140 Howard Ave, West Lafayette, IN 47906"
   }
