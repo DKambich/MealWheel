@@ -52,18 +52,22 @@ export function getFontSize(text: string) {
   return 12;
 }
 
-export function getWheelData(type?: string): WheelSegment[] {
-  return restaurants
-    .filter((entry: Restaurant) => (!type ? true : entry.type === type))
-    .map((restaurant) => ({
-      fillStyle: restaurant.brand.bgColor,
-      text: restaurant.name,
-      textFillStyle: restaurant.brand.fontColor,
-      textFontSize: getFontSize(restaurant.name),
-      lineWidth: 2,
-      textOrientation: "horizontal",
-      data: restaurant,
-    }));
+export function getRestaurantData(type?: string): Restaurant[] {
+  return restaurants.filter((entry: Restaurant) =>
+    !type ? true : entry.type === type
+  );
+}
+
+export function getWheelData(restaurants: Restaurant[]): WheelSegment[] {
+  return restaurants.map((restaurant) => ({
+    fillStyle: restaurant.brand.bgColor,
+    text: restaurant.name,
+    textFillStyle: restaurant.brand.fontColor,
+    textFontSize: getFontSize(restaurant.name),
+    lineWidth: 2,
+    textOrientation: "horizontal",
+    data: restaurant,
+  }));
 }
 
 declare global {

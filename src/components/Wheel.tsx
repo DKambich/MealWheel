@@ -39,6 +39,30 @@ export class Wheel extends Component<WheelProps, WheelState> {
     });
   }
 
+  componentDidUpdate(prevProps: WheelProps) {
+    if (prevProps.segments !== this.props.segments) {
+      const wheel = new window.Winwheel({
+        canvasId: "wheelCanvas",
+        responsive: true,
+        drawText: true,
+        numSegments: this.props.segments.length,
+        segments: this.props.segments,
+        pins: true,
+        animation: {
+          type: "spinToStop",
+          callbackFinished: this.onSpinEnd,
+          callbackAfter: this.drawColourTriangle,
+        },
+        clearTheCanvas: false,
+      });
+
+      this.setState({ wheel }, () => {
+        this.state.wheel.draw();
+        setTimeout(this.drawColourTriangle, 1);
+      });
+    }
+  }
+
   componentWillUnmount() {
     this.state.wheel.stopAnimation(false);
   }

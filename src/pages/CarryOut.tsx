@@ -8,13 +8,19 @@ import {
   Restaurant,
   DEFAULT_RESTAURANT,
   routes,
+  getRestaurantData,
 } from "../constants";
-import { Container, Jumbotron } from "react-bootstrap";
+import { Container, Jumbotron, Button } from "react-bootstrap";
+import SelectListModal from "../components/SelectListModal";
+
+const carryOutRestaurants = getRestaurantData("take_out");
 
 export default function CarryOut() {
-  const [modalShow, setModalShow] = React.useState(false);
-  const [winner, setWinner] = React.useState<Restaurant>(DEFAULT_RESTAURANT);
-  const segments = getWheelData("take_out");
+  const [showWinnerModal, setShowWinnerModal] = React.useState(false);
+  const [showSelectModal, setShowSelectModal] = React.useState(false);
+  const [restaurants, setRestaurants] = React.useState(carryOutRestaurants);
+  const [winner, setWinner] = React.useState(DEFAULT_RESTAURANT);
+  const segments = getWheelData(restaurants);
 
   return (
     <>
@@ -26,11 +32,12 @@ export default function CarryOut() {
             segments={segments}
             onSpinEnd={(segment: WheelSegment) => {
               setWinner(segment.data);
-              setModalShow(true);
+              setShowWinnerModal(true);
             }}
           />
         </>
       )}
+      <Button onClick={() => setShowSelectModal(true)}>Test</Button>
       {segments.length === 0 && (
         <Container>
           <Jumbotron className="my-4">
@@ -43,9 +50,25 @@ export default function CarryOut() {
         </Container>
       )}
       <WinnerModal
-        show={modalShow}
-        onHide={() => setModalShow(false)}
+        show={showWinnerModal}
+        onHide={() => setShowWinnerModal(false)}
         winner={winner}
+      />
+      <SelectListModal
+        show={showSelectModal}
+        allData={carryOutRestaurants}
+        usedData={restaurants}
+        renderItem={(val: Restaurant) => {
+          return <>{val.name}</>;
+        }}
+        onHide={(cancelled, data) => {
+          setShowSelectModal(false);
+          if (!cancelled && data) setRestaurants(data);
+        }}
+        validateData={(data) => data.length >= 2}
+        getValidationError={(data) =>
+          data.length <= 2 ? "Must have 2 or more restaurants selected!" : ""
+        }
       />
     </>
   );

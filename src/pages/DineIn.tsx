@@ -8,13 +8,17 @@ import {
   Restaurant,
   DEFAULT_RESTAURANT,
   routes,
+  getRestaurantData,
 } from "../constants";
 import { Jumbotron, Container } from "react-bootstrap";
 
 export default function DineIn() {
   const [modalShow, setModalShow] = React.useState(false);
   const [winner, setWinner] = React.useState<Restaurant>(DEFAULT_RESTAURANT);
-  const segments = getWheelData("dine_in");
+  const [restaurants, setRestaurants] = React.useState(
+    getRestaurantData("dine_in")
+  );
+  const segments = getWheelData(restaurants);
 
   return (
     <>

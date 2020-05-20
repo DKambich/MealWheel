@@ -14,7 +14,7 @@ import { Restaurant } from "../constants";
 type WinnerModalProps = {
   onHide: () => void;
   show: boolean;
-  winner: Restaurant | null;
+  winner: Restaurant;
 };
 export default function WinnerModal({
   onHide,
