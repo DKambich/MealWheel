@@ -48,7 +48,8 @@ export function getFontSize(text: string) {
   if (text.length < 10) return 22;
   if (text.length < 15) return 20;
   if (text.length < 20) return 18;
-  return 16;
+  if (text.length < 30) return 14;
+  return 12;
 }
 
 export function getWheelData(type?: string): WheelSegment[] {
