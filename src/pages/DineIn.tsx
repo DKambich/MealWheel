@@ -60,7 +60,7 @@ export default function DineIn() {
         show={showSelectModal}
         allData={dineInRestaurants}
         usedData={restaurants}
-        title={"Select Carry Out Restaurants"}
+        title={"Select Dine In Restaurants"}
         renderItem={(val: Restaurant) => {
           return <>{val.name}</>;
         }}
