@@ -3,7 +3,7 @@ import { Col, Row, Button } from "react-bootstrap";
 import { DEFAULT_WHEEL, WheelSegment, WinWheel } from "../constants";
 
 type WheelProps = {
-  customizeButton?: JSX.Element;
+  customizeSegments?: () => void;
   onSpinEnd: (segment: WheelSegment) => void;
   segments: WheelSegment[];
 };
@@ -135,7 +135,13 @@ export class Wheel extends Component<WheelProps, WheelState> {
           >
             Spin Me
           </Button>
-          {this.props.customizeButton}
+          <Button
+            disabled={this.state.spinning}
+            onClick={this.props.customizeSegments}
+            className="mx-2"
+          >
+            Customize
+          </Button>
         </Row>
       </Col>
     );

@@ -11,13 +11,16 @@ import {
   getRestaurantData,
 } from "../constants";
 import { Jumbotron, Container } from "react-bootstrap";
+import SelectListModal from "../components/SelectListModal";
+
+const dineInRestaurants = getRestaurantData("dine_in");
 
 export default function DineIn() {
-  const [modalShow, setModalShow] = React.useState(false);
+  const [showWinnerModal, setShowWinnerModal] = React.useState(false);
+  const [showSelectModal, setShowSelectModal] = React.useState(false);
+
   const [winner, setWinner] = React.useState<Restaurant>(DEFAULT_RESTAURANT);
-  const [restaurants, setRestaurants] = React.useState(
-    getRestaurantData("dine_in")
-  );
+  const [restaurants, setRestaurants] = React.useState(dineInRestaurants);
   const segments = getWheelData(restaurants);
 
   return (
@@ -31,8 +34,9 @@ export default function DineIn() {
             segments={segments}
             onSpinEnd={(segment: WheelSegment) => {
               setWinner(segment.data);
-              setModalShow(true);
+              setShowWinnerModal(true);
             }}
+            customizeSegments={() => setShowSelectModal(true)}
           />
         </>
       )}
@@ -48,9 +52,26 @@ export default function DineIn() {
         </Container>
       )}
       <WinnerModal
-        show={modalShow}
-        onHide={() => setModalShow(false)}
+        show={showWinnerModal}
+        onHide={() => setShowWinnerModal(false)}
         winner={winner}
+      />
+      <SelectListModal
+        show={showSelectModal}
+        allData={dineInRestaurants}
+        usedData={restaurants}
+        title={"Select Carry Out Restaurants"}
+        renderItem={(val: Restaurant) => {
+          return <>{val.name}</>;
+        }}
+        onHide={(cancelled, data) => {
+          setShowSelectModal(false);
+          if (!cancelled && data) setRestaurants(data);
+        }}
+        validateData={(data) => data.length >= 2}
+        getValidationError={(data) =>
+          data.length <= 2 ? "Must have 2 or more restaurants selected!" : ""
+        }
       />
     </>
   );

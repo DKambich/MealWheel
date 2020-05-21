@@ -10,7 +10,7 @@ import {
   routes,
   getRestaurantData,
 } from "../constants";
-import { Container, Jumbotron, Button } from "react-bootstrap";
+import { Container, Jumbotron } from "react-bootstrap";
 import SelectListModal from "../components/SelectListModal";
 
 const carryOutRestaurants = getRestaurantData("carry_out");
@@ -33,11 +33,7 @@ export default function CarryOut() {
               setWinner(segment.data);
               setShowWinnerModal(true);
             }}
-            customizeButton={
-              <Button onClick={() => setShowSelectModal(true)} >
-                Customize
-              </Button>
-            }
+            customizeSegments={() => setShowSelectModal(true)}
           />
         </>
       )}
