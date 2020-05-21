@@ -7,6 +7,7 @@ import {
   ModalFooter,
   Button,
   Alert,
+  ModalBody,
 } from "react-bootstrap";
 import { Component } from "react";
 import ModalHeader from "react-bootstrap/ModalHeader";
@@ -76,30 +77,33 @@ export default class SelectListModal extends Component<
         <ModalHeader closeButton onHide={() => onHide(true)}>
           <ModalTitle>Select Data</ModalTitle>
         </ModalHeader>
-        <ListGroup variant="flush">
-          {checkedData.map((element, index) => (
-            <ListGroupItem
-              key={index}
-              action
-              onClick={() => {
-                checkedData[index].checked = !element.checked;
-                this.setState({ checkedData });
-              }}
-            >
-              <div className="form-check">
-                <input
-                  onChange={() => {}}
-                  type="checkbox"
-                  className="form-check-input"
-                  checked={element.checked}
-                />
-                <label className="form-check-label">
-                  {renderItem(element.data)}
-                </label>
-              </div>
-            </ListGroupItem>
-          ))}
-        </ListGroup>
+        <ModalBody className="p-0">
+          <ListGroup variant="flush">
+            {checkedData.map((element, index) => (
+              <ListGroupItem
+                key={index}
+                action
+                onClick={() => {
+                  checkedData[index].checked = !element.checked;
+                  this.setState({ checkedData });
+                }}
+              >
+                <div className="form-check">
+                  <input
+                    onChange={() => {}}
+                    type="checkbox"
+                    className="form-check-input"
+                    checked={element.checked}
+                  />
+                  <label className="form-check-label">
+                    {renderItem(element.data)}
+                  </label>
+                </div>
+              </ListGroupItem>
+            ))}
+          </ListGroup>
+        </ModalBody>
+
         <ModalFooter>
           {validationError !== "" && (
             <Alert variant="danger">{validationError}</Alert>
