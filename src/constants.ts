@@ -53,9 +53,9 @@ export function getFontSize(text: string) {
 }
 
 export function getRestaurantData(type?: string): Restaurant[] {
-  return restaurants.filter((entry: Restaurant) =>
-    !type ? true : entry.type === type
-  );
+  return restaurants
+    .filter((entry: Restaurant) => (!type ? true : entry.type === type))
+    .sort((a, b) => (a.name < b.name ? -1 : 1));
 }
 
 export function getWheelData(restaurants: Restaurant[]): WheelSegment[] {
