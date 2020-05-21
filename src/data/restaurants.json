@@ -1,200 +1,288 @@
 [
-  {
-    "name": "Chick-Fil-A",
-    "type": "take_out",
-    "cuisine": "sandwich",
-    "brand": {
-      "bgColor": "#E2163D",
-      "fontColor": "#FFFFFF",
-      "logo": "chick_fil_a_512.png"
+    {
+        "name": "Chick-Fil-A",
+        "type": "carry_out",
+        "cuisine": "sandwich",
+        "brand": {
+            "bgColor": "#E2163D",
+            "fontColor": "#FFFFFF",
+            "logo": "chick_fil_a_512.png"
+        },
+        "location": "50 N Creasy Ln, Lafayette, IN 47905"
     },
-    "location": "50 N Creasy Ln, Lafayette, IN 47905"
-  },
-  {
-    "name": "Happy China",
-    "type": "take_out",
-    "cuisine": "chinese",
-    "brand": {
-      "bgColor": "#cd1628",
-      "fontColor": "#f4db05",
-      "logo": "happy_china_512.png"
+    {
+        "name": "Happy China",
+        "type": "carry_out",
+        "cuisine": "chinese",
+        "brand": {
+            "bgColor": "#cd1628",
+            "fontColor": "#f4db05",
+            "logo": "happy_china_512.png"
+        },
+        "location": "219 E State St, West Lafayette, IN 47906"
     },
-    "location": "219 E State St, West Lafayette, IN 47906"
-  },
-  {
-    "name": "Wendy's",
-    "type": "take_out",
-    "cuisine": "sandwich",
-    "brand": {
-      "bgColor": "#FFFFFF",
-      "fontColor": "#D22030",
-      "logo": "wendys_512.png"
+    {
+        "name": "Wendy's",
+        "type": "carry_out",
+        "cuisine": "sandwich",
+        "brand": {
+            "bgColor": "#FFFFFF",
+            "fontColor": "#D22030",
+            "logo": "wendys_512.png"
+        },
+        "location": "252 E State St, West Lafayette, IN 47906"
     },
-    "location": "252 E State St, West Lafayette, IN 47906"
-  },
-  {
-    "name": "Chipotle",
-    "type": "take_out",
-    "cuisine": "mexican",
-    "brand": {
-      "bgColor": "#A81612",
-      "fontColor": "#FFFFFF",
-      "logo": "chipotle_512.png"
+    {
+        "name": "Chipotle",
+        "type": "carry_out",
+        "cuisine": "mexican",
+        "brand": {
+            "bgColor": "#A81612",
+            "fontColor": "#FFFFFF",
+            "logo": "chipotle_512.png"
+        },
+        "location": "200 W State St, West Lafayette, IN 47906"
     },
-    "location": "200 W State St, West Lafayette, IN 47906"
-  },
-  {
-    "name": "Dog n Suds",
-    "type": "take_out",
-    "cuisine": "sandwich",
-    "brand": {
-      "bgColor": "#F6EB16",
-      "fontColor": "#ED1C24",
-      "logo": "dog_n_suds_512.png"
+    {
+        "name": "Dog n Suds",
+        "type": "carry_out",
+        "cuisine": "sandwich",
+        "brand": {
+            "bgColor": "#F6EB16",
+            "fontColor": "#ED1C24",
+            "logo": "dog_n_suds_512.png"
+        },
+        "location": "401 Sagamore Pkwy W, West Lafayette, IN 47906"
     },
-    "location": "401 Sagamore Pkwy W, West Lafayette, IN 47906"
-  },
-  {
-    "name": "Noodles & Company",
-    "type": "take_out",
-    "cuisine": "pasta",
-    "brand": {
-      "bgColor": "#C42232",
-      "fontColor": "#FCFCFB",
-      "logo": "noodles_&_company_512.png"
+    {
+        "name": "Noodles & Company",
+        "type": "carry_out",
+        "cuisine": "pasta",
+        "brand": {
+            "bgColor": "#C42232",
+            "fontColor": "#FCFCFB",
+            "logo": "noodles_&_company_512.png"
+        },
+        "location": "102 N Chauncey Ave, West Lafayette, IN 47906"
     },
-    "location": "102 N Chauncey Ave, West Lafayette, IN 47906"
-  },
-  {
-    "name": "Mad Mushrooom",
-    "type": "take_out",
-    "cuisine": "pizza",
-    "brand": {
-      "bgColor": "#ba2025",
-      "fontColor": "#ffffff",
-      "logo": "mad_mushroom_512.png"
+    {
+        "name": "Mad Mushrooom",
+        "type": "carry_out",
+        "cuisine": "pizza",
+        "brand": {
+            "bgColor": "#ba2025",
+            "fontColor": "#ffffff",
+            "logo": "mad_mushroom_512.png"
+        },
+        "location": "320 W State St, West Lafayette, IN 47906"
     },
-    "location": "320 W State St, West Lafayette, IN 47906"
-  },
-  {
-    "name": "Five Guys",
-    "type": "take_out",
-    "cuisine": "burger",
-    "brand": {
-      "bgColor": "#fefefe",
-      "fontColor": "#d81a31",
-      "logo": "five_guys_512.png"
+    {
+        "name": "Five Guys",
+        "type": "carry_out",
+        "cuisine": "burger",
+        "brand": {
+            "bgColor": "#fefefe",
+            "fontColor": "#d81a31",
+            "logo": "five_guys_512.png"
+        },
+        "location": "135 S Chauncey Ave Suite 1-K, West Lafayette, IN 47906"
     },
-    "location": "135 S Chauncey Ave Suite 1-K, West Lafayette, IN 47906"
-  },
-  {
-    "name": "Panda Express",
-    "type": "take_out",
-    "cuisine": "chinese",
-    "brand": {
-      "bgColor": "#fc1921",
-      "fontColor": "#000000",
-      "logo": "panda_express_512.png"
+    {
+        "name": "Panda Express",
+        "type": "carry_out",
+        "cuisine": "chinese",
+        "brand": {
+            "bgColor": "#fc1921",
+            "fontColor": "#000000",
+            "logo": "panda_express_512.png"
+        },
+        "location": "138 Northwestern Ave, West Lafayette, IN 47906"
     },
-    "location": "138 Northwestern Ave, West Lafayette, IN 47906"
-  },
-  {
-    "name": "Fiesta Mexican Grill",
-    "type": "take_out",
-    "cuisine": "mexican",
-    "brand": {
-      "bgColor": "#07603a",
-      "fontColor": "#cd2229",
-      "logo": "fiesta_mexican_grill_512.png"
+    {
+        "name": "Fiesta Mexican Grill",
+        "type": "carry_out",
+        "cuisine": "mexican",
+        "brand": {
+            "bgColor": "#07603a",
+            "fontColor": "#cd2229",
+            "logo": "fiesta_mexican_grill_512.png"
+        },
+        "location": "102 N Chauncey Ave, West Lafayette, IN 47906"
     },
-    "location": "102 N Chauncey Ave, West Lafayette, IN 47906"
-  },
-  {
-    "name": "South Street Smokehouse",
-    "type": "take_out",
-    "cuisine": "sandwich",
-    "brand": {
-      "bgColor": "#8b0101",
-      "fontColor": "#faf7fc",
-      "logo": "south_street_smokehouse_512.png"
+    {
+        "name": "South Street Smokehouse",
+        "type": "carry_out",
+        "cuisine": "sandwich",
+        "brand": {
+            "bgColor": "#8b0101",
+            "fontColor": "#faf7fc",
+            "logo": "south_street_smokehouse_512.png"
+        },
+        "location": "3305 South St, Lafayette, IN 47904"
     },
-    "location": "3305 South St, Lafayette, IN 47904"
-  },
-  {
-    "name": "Qdoba",
-    "type": "take_out",
-    "cuisine": "mexican",
-    "brand": {
-      "bgColor": "#ffffff",
-      "fontColor": "#f99d1c",
-      "logo": "qdoba_512.png"
+    {
+        "name": "Qdoba",
+        "type": "carry_out",
+        "cuisine": "mexican",
+        "brand": {
+            "bgColor": "#ffffff",
+            "fontColor": "#f99d1c",
+            "logo": "qdoba_512.png"
+        },
+        "location": "139 Northwestern Ave, West Lafayette, IN 47906"
     },
-    "location": "139 Northwestern Ave, West Lafayette, IN 47906"
-  },
-  {
-    "name": "Christos",
-    "type": "dine_in",
-    "cuisine": "sandwich",
-    "brand": {
-      "bgColor": "#ffffff",
-      "fontColor": "#df9c46",
-      "logo": "christos_512.png"
+    {
+        "name": "Christos",
+        "type": "dine_in",
+        "cuisine": "sandwich",
+        "brand": {
+            "bgColor": "#ffffff",
+            "fontColor": "#df9c46",
+            "logo": "christos_512.png"
+        },
+        "location": "1018 Sagamore Pkwy W, West Lafayette, IN 47906"
     },
-    "location": "1018 Sagamore Pkwy W, West Lafayette, IN 47906"
-  },
-  {
-    "name": "Digby's",
-    "type": "dine_in",
-    "cuisine": "sandwich",
-    "brand": {
-      "bgColor": "#ffffff",
-      "fontColor": "#222021",
-      "logo": "digbys_512.png"
+    {
+        "name": "Digby's",
+        "type": "dine_in",
+        "cuisine": "sandwich",
+        "brand": {
+            "bgColor": "#ffffff",
+            "fontColor": "#222021",
+            "logo": "digbys_512.png"
+        },
+        "location": "133 N 4th St, Lafayette, IN 47901"
     },
-    "location": "133 N 4th St, Lafayette, IN 47901"
-  },
-  {
-    "name": "Sake Sushi Asian Fusion",
-    "type": "dine_in",
-    "cuisine": "sushi",
-    "brand": {
-      "bgColor": "#be3c30",
-      "fontColor": "#fefefe",
-      "logo": "sake_sushi_asian_fusion_512.png"
+    {
+        "name": "Sake Sushi Asian Fusion",
+        "type": "dine_in",
+        "cuisine": "sushi",
+        "brand": {
+            "bgColor": "#be3c30",
+            "fontColor": "#fefefe",
+            "logo": "sake_sushi_asian_fusion_512.png"
+        },
+        "location": "731 Main St, Lafayette, IN 47901"
     },
-    "location": "731 Main St, Lafayette, IN 47901"
-  },
-  {
-    "name": "Sushi Don",
-    "type": "dine_in",
-    "cuisine": "sushi",
-    "brand": {
-      "bgColor": "#fefefe",
-      "fontColor": "#acf41e",
-      "logo": "sushi_don_512.png"
+    {
+        "name": "Sushi Don",
+        "type": "dine_in",
+        "cuisine": "sushi",
+        "brand": {
+            "bgColor": "#fefefe",
+            "fontColor": "#acf41e",
+            "logo": "sushi_don_512.png"
+        },
+        "location": "3338 Main St, Lafayette, IN 47905"
     },
-    "location": "3338 Main St, Lafayette, IN 47905"
-  },
-  {
-    "name": "Dos Amigos",
-    "type": "dine_in",
-    "cuisine": "mexican",
-    "brand": {
-      "bgColor": "#febf55",
-      "fontColor": "#f20003",
-      "logo": "dos_amigos_512.png"
+    {
+        "name": "Dos Amigos",
+        "type": "dine_in",
+        "cuisine": "mexican",
+        "brand": {
+            "bgColor": "#febf55",
+            "fontColor": "#f20003",
+            "logo": "dos_amigos_512.png"
+        },
+        "location": "360 Brown St, West Lafayette, IN 47906"
     },
-    "location": "360 Brown St, West Lafayette, IN 47906"
-  },
-  {
-    "name": "La Hacienda",
-    "type": "dine_in",
-    "cuisine": "mexican",
-    "brand": {
-      "bgColor": "#fef200",
-      "fontColor": "#912822",
-      "logo": "la_hacienda_512.png"
+    {
+        "name": "La Hacienda",
+        "type": "dine_in",
+        "cuisine": "mexican",
+        "brand": {
+            "bgColor": "#fef200",
+            "fontColor": "#912822",
+            "logo": "la_hacienda_512.png"
+        },
+        "location": "140 Howard Ave, West Lafayette, IN 47906"
     },
-    "location": "140 Howard Ave, West Lafayette, IN 47906"
-  }
+    {
+        "name": "Lotsa Pizza",
+        "type": "dine_in",
+        "cuisine": "pizza",
+        "brand": {
+            "bgColor": "#fcf7b0",
+            "fontColor": "#db1f2c",
+            "logo": "lotsa_pizza_512.png"
+        },
+        "location": "316 W State St, West Lafayette, IN 47906"
+    },
+    {
+        "name": "Azzip Pizza",
+        "type": "dine_in",
+        "cuisine": "pizza",
+        "brand": {
+            "bgColor": "#363636",
+            "fontColor": "#ffda05",
+            "logo": "azzip_pizza_512.png"
+        },
+        "location": "105 Farabee Dr S suite b, Lafayette, IN 47905"
+    },
+    {
+        "name": "Triple XXX",
+        "type": "dine_in",
+        "cuisine": "burger",
+        "brand": {
+            "bgColor": "#da1508",
+            "fontColor": "#fadc00",
+            "logo": "triple_xxx_512.png"
+        },
+        "location": "2 N Salisbury St, West Lafayette, IN 47906"
+    },
+    {
+        "name": "Steak n Shake",
+        "type": "dine_in",
+        "cuisine": "burger",
+        "brand": {
+            "bgColor": "#ffffff",
+            "fontColor": "#221f1f",
+            "logo": "steak_n_shake_512.png"
+        },
+        "location": "2 N Sagamore Pkwy N, Lafayette, IN 47904"
+    },
+    {
+        "name": "Arni's",
+        "type": "dine_in",
+        "cuisine": "pizza",
+        "brand": {
+            "bgColor": "#ffffff",
+            "fontColor": "#ee3a43",
+            "logo": "arnis_512.png"
+        },
+        "location": "2200 Elmwood Ave, Lafayette, IN 47904"
+    },
+    {
+        "name": "Nine Irish Brothers",
+        "type": "dine_in",
+        "cuisine": "sandwich",
+        "brand": {
+            "bgColor": "#ffc114",
+            "fontColor": "#15a44a",
+            "logo": "nine_irish_brothers_512.png"
+        },
+        "location": "119 Howard Ave, West Lafayette, IN 47906"
+    },
+    {
+        "name": "Buffalo Wild Wings",
+        "type": "dine_in",
+        "cuisine": "wings",
+        "brand": {
+            "bgColor": "#fbcd05",
+            "fontColor": "#1b1e25",
+            "logo": "buffalo_wild_wings_512.png"
+        },
+        "location": "360 Brown St, West Lafayette, IN 47906"
+    },
+    {
+        "name": "Bru Burger",
+        "type": "dine_in",
+        "cuisine": "burger",
+        "brand": {
+            "bgColor": "#005f9f",
+            "fontColor": "#ffffff",
+            "logo": "bru_burger_512.png"
+        },
+        "location": "101 Main St Suite 100, Lafayette, IN 47901"
+    }
 ]
