@@ -13,11 +13,7 @@ import {
 import { Container, Jumbotron, Button } from "react-bootstrap";
 import SelectListModal from "../components/SelectListModal";
 
-const carryOutRestaurants = [
-  ...getRestaurantData("carry_out"),
-  ...getRestaurantData("carry_out"),
-];
-
+const carryOutRestaurants = getRestaurantData("carry_out");
 export default function CarryOut() {
   const [showWinnerModal, setShowWinnerModal] = React.useState(false);
   const [showSelectModal, setShowSelectModal] = React.useState(false);
