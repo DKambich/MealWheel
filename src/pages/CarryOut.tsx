@@ -27,6 +27,9 @@ export default function CarryOut() {
       {segments.length > 0 && (
         <>
           <h1 className="display-6 text-center">Carry Out Wheel</h1>
+          <h6 className="display-6 text-center">
+            Wanna carry out? Use this wheel to help pick
+          </h6>
           <Wheel
             segments={segments}
             onSpinEnd={(segment: WheelSegment) => {

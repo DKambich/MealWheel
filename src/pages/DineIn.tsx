@@ -30,6 +30,9 @@ export default function DineIn() {
       {segments.length > 0 && (
         <>
           <h1 className="display-6 text-center">Dine In Wheel</h1>
+          <h6 className="display-6 text-center">
+            Feel like dining in? Try this wheel to help make the choice
+          </h6>
           <Wheel
             segments={segments}
             onSpinEnd={(segment: WheelSegment) => {
