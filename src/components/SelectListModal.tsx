@@ -18,6 +18,7 @@ type SelectListModalProps = {
   renderItem: (value: any) => JSX.Element;
   show: boolean;
   usedData: any[];
+  title?: string;
   validateData?: (data: any[]) => boolean;
   getValidationError?: (data: any[]) => string;
 };
@@ -62,6 +63,7 @@ export default class SelectListModal extends Component<
       onHide,
       renderItem,
       show,
+      title,
       validateData,
       getValidationError,
     } = this.props;
@@ -75,7 +77,7 @@ export default class SelectListModal extends Component<
         centered
       >
         <ModalHeader closeButton onHide={() => onHide(true)}>
-          <ModalTitle>Select Data</ModalTitle>
+          <ModalTitle>{title}</ModalTitle>
         </ModalHeader>
         <ModalBody className="p-0">
           <ListGroup variant="flush">

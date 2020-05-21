@@ -33,10 +33,14 @@ export default function CarryOut() {
               setWinner(segment.data);
               setShowWinnerModal(true);
             }}
+            customizeButton={
+              <Button onClick={() => setShowSelectModal(true)} >
+                Customize
+              </Button>
+            }
           />
         </>
       )}
-      <Button onClick={() => setShowSelectModal(true)}>Test</Button>
       {segments.length === 0 && (
         <Container>
           <Jumbotron className="my-4">
@@ -57,6 +61,7 @@ export default function CarryOut() {
         show={showSelectModal}
         allData={carryOutRestaurants}
         usedData={restaurants}
+        title={"Select Carry Out Restaurants"}
         renderItem={(val: Restaurant) => {
           return <>{val.name}</>;
         }}
