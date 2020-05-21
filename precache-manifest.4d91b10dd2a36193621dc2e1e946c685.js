@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4b45f2de06c1f762a9ab3e2e25143c1e",
+    "revision": "65b1df064f0ec456900d61b0d024fa3c",
     "url": "/MealWheel/index.html"
   },
   {
-    "revision": "b7a59412b0ee658084fd",
+    "revision": "0e5ceb29beceee2a1359",
     "url": "/MealWheel/static/css/2.69121389.chunk.css"
   },
   {
-    "revision": "b7a59412b0ee658084fd",
-    "url": "/MealWheel/static/js/2.a5e1fc17.chunk.js"
+    "revision": "0e5ceb29beceee2a1359",
+    "url": "/MealWheel/static/js/2.082cef33.chunk.js"
   },
   {
     "revision": "3453b8997016469371284a28c0e873e2",
-    "url": "/MealWheel/static/js/2.a5e1fc17.chunk.js.LICENSE.txt"
+    "url": "/MealWheel/static/js/2.082cef33.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8db7d248405e1dd7e354",
-    "url": "/MealWheel/static/js/main.27f97dd9.chunk.js"
+    "revision": "3a4383b16cd107d28c8e",
+    "url": "/MealWheel/static/js/main.9acf04a3.chunk.js"
   },
   {
     "revision": "0f20fc2ed4f0e4c053c5",
@@ -66,10 +66,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "4a68b0a162d3aa8db8c51724bbc1a080",
     "url": "/MealWheel/static/media/fiesta_mexican_grill_512.4a68b0a1.png"
-  },
-  {
-    "revision": "3400eedddd710435d123d12ae39d18b7",
-    "url": "/MealWheel/static/media/five_guys_512.3400eedd.png"
   },
   {
     "revision": "ec6695fe0ca7d3d105583e1226ec7bce",
